@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { useEffect, useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -144,34 +145,36 @@ fixedHeight: {
         height: 190,
     },
     [theme.breakpoints.up('md')]: {
-        height: 140,
+        height: 190,
     },
     
 },
 }));
 
-const productTotal = {
-    title: 'Total de productos',
-    value: '893',
-    text: 'al 7 de Septiembre'
-}
-
-const userTotal = {
-    title: 'Total de Usuarios',
-    value: '1384',
-    text: 'al 7 de Septiembre'
-}
-
-const categoryTotal = {
-    title: 'Total de categorias',
-    value: '4',
-    text: 'al 7 de Septiembre'
-}
-
-let cardProps = [productTotal, userTotal, categoryTotal];
-
-
 export default function Dashboard() {
+
+    const [productCount, setProductCount] = useState([])
+    const [categoriesCount, setCategoriesCount] = useState([])
+    const [userCount, setUserCount] = useState([])
+
+    useEffect(() => {
+    fetch('http://localhost:3000/api/products')
+        .then(res => res.json())
+        .then(data => {
+        setProductCount(data.products)
+        setCategoriesCount(data.categories)
+        })     
+    }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/users')
+            .then(res => res.json())
+            .then(data => {
+            setUserCount(data.meta)
+            })     
+        }, [])
+
+    let cardProps = [productCount, userCount, categoriesCount];    
 
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);

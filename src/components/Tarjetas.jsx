@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import LocalBarIcon from '@material-ui/icons/LocalBar';
+import StorageIcon from '@material-ui/icons/Storage';
 import Title from './Title';
 
 function preventDefault(event) {
@@ -23,12 +23,14 @@ export default function Deposits(props) {
     <React.Fragment>
         <Title className={classes.colorText}>{props.title}</Title>
         <Typography component="p" variant="h4" className={classes.colorText}>
-        <LocalBarIcon fontSize="medium" />
-            {props.value}
+            <StorageIcon fontSize="large" />
         </Typography>
-        <Typography color="textSecondary" className={classes.depositContext, classes.colorText}>
+        <Typography component="p" variant="h4" className={classes.colorText}>
+            {props.count}
+        </Typography>
+{/*         <Typography color="textSecondary" className={classes.depositContext, classes.colorText}>
             {props.text}
-        </Typography>
+        </Typography> */}
     </React.Fragment>
     
 );

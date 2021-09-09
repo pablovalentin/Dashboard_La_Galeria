@@ -9,18 +9,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
-/* function createData(id, name, price, quantity, category, variety) {
-  return { id, name, price, quantity, category, variety };
-}
-
-const rows = [
-  createData(0, 'Trumpeter Reserve', '$ 1200', '11' , 'Vinos' , 'Pinot'),
-  createData(0, 'Trumpeter Malbec', '$ 1400', '20' , 'Vinos' , 'Malbec'),
-  createData(0, 'Jack Daniels', '$ 5400', '5' , 'Whisky' , 'Tennesse'),
-  createData(0, 'Yamazaki', '$ 85000', '2' , 'Whisky' , 'Single Malt'),
-  createData(0, 'Bombay', '$ 3450', '50' , 'Spirits' , 'Gin'),
-]; */
-
 function preventDefault(event) {
   event.preventDefault();
 }
@@ -41,7 +29,6 @@ export default function Orders() {
         .then(res => res.json())
         .then(data => {
           setProductList(data.data.products)
-          console.log(productList)
         })     
 }, [])
 
@@ -64,7 +51,7 @@ export default function Orders() {
               <TableCell>{product.name}</TableCell>              
               <TableCell>{product.quantity}</TableCell>
               <TableCell>{product.category}</TableCell>
-              <TableCell align="right">{product.price}</TableCell>
+              <TableCell align="right">{'$' + product.price}</TableCell>
             </TableRow>
             )
             })}
