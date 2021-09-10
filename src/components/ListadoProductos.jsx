@@ -35,7 +35,7 @@ export default function Orders() {
   return (
     <React.Fragment>
       <Title>Listado de productos</Title>
-      <Table size="small">
+      <Table size="small"> 
         <TableHead>
           <TableRow>
             <TableCell>Nombre</TableCell>            

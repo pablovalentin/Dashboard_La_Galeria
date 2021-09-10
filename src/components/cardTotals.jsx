@@ -28,9 +28,6 @@ export default function Deposits(props) {
         <Typography component="p" variant="h4" className={classes.colorText}>
             {props.count}
         </Typography>
-{/*         <Typography color="textSecondary" className={classes.depositContext, classes.colorText}>
-            {props.text}
-        </Typography> */}
     </React.Fragment>
     
 );

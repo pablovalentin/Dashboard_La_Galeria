@@ -20,7 +20,9 @@ import Menu from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems } from './listItems';
-import Tarjetas from './Tarjetas';
+import CardTotals from './cardTotals';
+import LastUser from './LastUser';
+import LastProduct from './LastProduct';
 import ListadoProductos from './ListadoProductos';
 
 function Copyright() {
@@ -140,15 +142,38 @@ totals: {
     alignItems: 'center'
 },
 
+details: {
+    borderRadius: 10,
+    backgroundSize: '200%',
+    boxShadow: '0 3px 5px 2px rgba(025, 015, 020, .3)',
+    transition: '0.6s',
+    backgroundImage: 'linear-gradient(45deg, #ba68c8, #e1bee7, #8e24aa)',
+    '&:hover': {
+        backgroundPosition: 'right'
+    },  
+    alignItems: 'center'
+},
+
 fixedHeight: {
     [theme.breakpoints.down('sm')]: {
-        height: 190,
+        height: 160,
     },
     [theme.breakpoints.up('md')]: {
-        height: 190,
+        height: 180,
     },
     
 },
+
+fixedHeightLast: {
+    [theme.breakpoints.down('sm')]: {
+        height: 200,
+    },
+    [theme.breakpoints.up('md')]: {
+        height: 240,
+    },
+    
+},
+
 }));
 
 export default function Dashboard() {
@@ -174,7 +199,8 @@ export default function Dashboard() {
             })     
         }, [])
 
-    let cardProps = [productCount, userCount, categoriesCount];    
+    let cardTotalProps = [productCount, userCount, categoriesCount];    
+    let cardDetailsProps = [productCount, userCount, categoriesCount]; 
 
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
@@ -184,7 +210,8 @@ export default function Dashboard() {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-    const fixedHeightPaper = clsx(classes.paper, classes.totals, classes.fixedHeight);
+    const fixedHeightPaperTotal = clsx(classes.paper, classes.totals, classes.fixedHeight);
+    const fixedHeightPaperDetail = clsx(classes.paper, classes.details, classes.fixedHeightLast);
 
     return (
     <div className={classes.root}>
@@ -231,13 +258,24 @@ export default function Dashboard() {
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
                         {/* Tarjetas de totales */}
-                        {cardProps.map((card, i) => (
+                        {cardTotalProps.map((card, i) => (
                             <Grid item xs={12} md={4} lg={4}>
-                                <Paper className={fixedHeightPaper}>
-                                    <Tarjetas {...card} key={i}/>
+                                <Paper className={fixedHeightPaperTotal}>
+                                    <CardTotals {...card} key={i}/>
                                 </Paper>   
                             </Grid>
                         ))}
+                        {/* Tarjetas de totales */}
+                        <Grid item xs={12} md={6} lg={6}>
+                            <Paper className={fixedHeightPaperDetail}>
+                                <LastUser />
+                            </Paper>   
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={6}>
+                            <Paper className={fixedHeightPaperDetail}>
+                                <LastProduct />
+                            </Paper>   
+                        </Grid>
                         {/* Listado de productos */}
                         <Grid item xs={12}>
                             <Paper className={classes.paper}>
