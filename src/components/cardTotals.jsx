@@ -23,9 +23,6 @@ export default function Deposits(props) {
     <React.Fragment>
         <Title className={classes.colorText}>{props.title}</Title>
         <Typography component="p" variant="h4" className={classes.colorText}>
-            <StorageIcon fontSize="large" />
-        </Typography>
-        <Typography component="p" variant="h4" className={classes.colorText}>
             {props.count}
         </Typography>
     </React.Fragment>

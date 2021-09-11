@@ -156,10 +156,10 @@ details: {
 
 fixedHeight: {
     [theme.breakpoints.down('sm')]: {
-        height: 160,
+        height: 115,
     },
     [theme.breakpoints.up('md')]: {
-        height: 180,
+        height: 130,
     },
     
 },
