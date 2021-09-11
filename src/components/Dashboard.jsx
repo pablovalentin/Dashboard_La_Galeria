@@ -200,7 +200,6 @@ export default function Dashboard() {
         }, [])
 
     let cardTotalProps = [productCount, userCount, categoriesCount];    
-    let cardDetailsProps = [productCount, userCount, categoriesCount]; 
 
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
