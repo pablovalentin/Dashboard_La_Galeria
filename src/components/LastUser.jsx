@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar'
 import Title from './Title';
 import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
     depositContext: {
@@ -72,6 +73,7 @@ export default function LastUser() {
 
     return (
     <React.Fragment>
+        <Grid item xs={12} md={6} lg={6}>
         <Paper className={fixedHeightPaperDetail}>
         <Title className={classes.colorText}>Último usuario registrado:</Title>
         <Typography component="p" variant="h5" className={classes.colorText}>
@@ -84,6 +86,7 @@ export default function LastUser() {
             <Avatar alt="Imagen de usuario" src={user.image} className={classes.large}/>
         </Typography>
         </Paper>
+        </Grid>
     </React.Fragment>
     
 );

@@ -1,0 +1,15 @@
+ *{
+    box-sizing: border-box;
+  }/*
+  .App {
+    text-align: center;
+    
+  }
+   */
+main{
+    display: flex;
+  }
+
+.swtich-container {
+    margin-top: 60px
+} 

@@ -3,22 +3,22 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import { useEffect, useState } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Drawer from "@material-ui/core/Drawer";
+/* import Drawer from "@material-ui/core/Drawer"; */
 import Box from "@material-ui/core/Box";
-import AppBar from "@material-ui/core/AppBar";
+/* import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
+import List from "@material-ui/core/List"; */
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+/* import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
+import Badge from "@material-ui/core/Badge"; */
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import Menu from "@material-ui/icons/Menu";
+/* import Menu from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import { mainListItems } from "./MainListItems";
+import { mainListItems } from "./MainListItems"; */
 import CardTotal from "./CardTotal";
 import CardCategories from "./CardCategories";
 import LastUser from "./LastUser";
@@ -216,14 +216,14 @@ export default function Dashboard() {
   let cardTotalProps = [productCount, userCount, categoriesCount];
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  /* const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
-  };
+  }; */
 
   const fixedHeightPaperTotal = clsx(
     classes.paper,
@@ -244,7 +244,7 @@ export default function Dashboard() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar
+      {/* <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >
@@ -291,7 +291,7 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-      </Drawer>
+      </Drawer> */}
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
@@ -305,11 +305,11 @@ export default function Dashboard() {
               </Grid>
             ))}
             {/* Tarjeta de último usuario */}
-            <Grid item xs={12} md={6} lg={6}>
+           {/*  <Grid item xs={12} md={6} lg={6}> */}
               {/* <Paper className={fixedHeightPaperDetail}> */}
                 <LastUser />
               {/* </Paper> */}
-            </Grid>
+            {/* </Grid> */}
             {/* Tarjeta de último producto */}
             <Grid item xs={12} md={6} lg={6}>
               <Paper className={fixedHeightPaperDetail}>
