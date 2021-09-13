@@ -324,9 +324,9 @@ export default function Dashboard() {
             </Grid>
             {/* Listado de categorias, con stock total */}
             <Grid item xs={12} md={12} lg={12}>
-              <Paper className={fixedHeightPaperCategories}>
+              {/* <Paper className={fixedHeightPaperCategories}> */}
                 <CardCategories />
-              </Paper>
+             {/*  </Paper> */}
             </Grid>
           </Grid>
           <Box pt={4}>
