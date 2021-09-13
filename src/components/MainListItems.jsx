@@ -7,48 +7,58 @@ import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
 import CategoryIcon from "@material-ui/icons/Category";
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import TableChartIcon from "@material-ui/icons/TableChart";
+import { Link } from "react-router-dom";
+
 
 export const mainListItems = (
   <div>
-    <a href='/CardTotal' style={{ textDecoration: 'none' }}>
+    <Link to='/' style={{ textDecoration: 'none' }}>
+    <ListItem button>
+        <ListItemIcon >
+          <AssignmentIcon/>
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+    </ListItem>
+    </Link>
+    <Link to='/CardTotal' style={{ textDecoration: 'none' }}>
     <ListItem button>
         <ListItemIcon >
           <AssignmentIcon/>
         </ListItemIcon>
         <ListItemText primary="Totales" />
     </ListItem>
-    </a>
-    <a href='/LastUser' style={{ textDecoration: 'none' }}>
+    </Link>
+    <Link to='/LastUser' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIndIcon />
       </ListItemIcon>
       <ListItemText primary="Usuarios" />
     </ListItem>
-    </a>
-    <a href='/LastProduct' style={{ textDecoration: 'none' }}>
+    </Link>
+    <Link to='/LastProduct' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <LocalDrinkIcon />
       </ListItemIcon>
       <ListItemText primary="Productos" />
     </ListItem>
-    </a>
-    <a href='/ProductList' style={{ textDecoration: 'none' }}>
+    </Link>
+    <Link to='/ProductList' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <TableChartIcon />
       </ListItemIcon>
       <ListItemText primary="Listado" />
     </ListItem>
-    </a>
-    <a href='/CardCategories' style={{ textDecoration: 'none' }}>
+    </Link>
+    <Link to='/CardCategories' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <CategoryIcon />
       </ListItemIcon>
       <ListItemText primary="Categorías" />
     </ListItem>
-    </a>
+    </Link>
   </div>
 );
