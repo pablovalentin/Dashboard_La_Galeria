@@ -2,12 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
 import Title from "./Title";
-
-function preventDefault(event) {
-  event.preventDefault();
-}
 
 const useStyles = makeStyles({
   depositContext: {
@@ -18,14 +13,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LastProduct() {
-  const [product, setProduct] = useState([]);
+export default function CardCategories() {
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/products")
       .then((res) => res.json())
       .then((data) => {
-        setProduct(data.data.lastProduct);
+        setCategories(data.meta);
       });
   }, []);
 
@@ -33,18 +28,15 @@ export default function LastProduct() {
 
   return (
     <React.Fragment>
-      <Title className={classes.colorText}>Último usuario registrado:</Title>
+      <Title className={classes.colorText}>Categorias</Title>
       <Typography component="p" variant="h5" className={classes.colorText}>
-        {product.name}
+        Vinos: 4
       </Typography>
       <Typography component="p" variant="h5" className={classes.colorText}>
-        {"Stock: " + product.quantity}
+        Whiskies: 8
       </Typography>
       <Typography component="p" variant="h5" className={classes.colorText}>
-        {"$" + product.price}
-      </Typography>
-      <Typography component="p" variant="h5" className={classes.colorText}>
-        {"Categoria: " + product.category}
+        Spirits: 5
       </Typography>
     </React.Fragment>
   );
