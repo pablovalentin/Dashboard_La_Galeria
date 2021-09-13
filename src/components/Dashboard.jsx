@@ -173,12 +173,22 @@ const useStyles = makeStyles((theme) => ({
 
   fixedHeightLast: {
     [theme.breakpoints.down("sm")]: {
-      height: 200,
+      height: 230,
     },
     [theme.breakpoints.up("md")]: {
       height: 240,
     },
   },
+
+  fixedHeightCategories: {
+    [theme.breakpoints.down("sm")]: {
+      height: 170,
+    },
+    [theme.breakpoints.up("md")]: {
+      height: 190,
+    },
+  },
+
 }));
 
 export default function Dashboard() {
@@ -228,7 +238,7 @@ export default function Dashboard() {
   const fixedHeightPaperCategories = clsx(
     classes.paper,
     classes.categories,
-    classes.fixedHeightLast
+    classes.fixedHeightCategories
   );
 
   return (

@@ -5,10 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar'
 import Title from './Title';
 
-function preventDefault(event) {
-    event.preventDefault();
-}
-
 const useStyles = makeStyles({
     depositContext: {
         flex: 1,
