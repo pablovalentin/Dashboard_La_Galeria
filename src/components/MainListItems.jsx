@@ -12,7 +12,7 @@ import TableChartIcon from "@material-ui/icons/TableChart";
 
 export const mainListItems = (
   <div>
-    <a href='/CardCategories' style={{ textDecoration: 'none' }}>
+    <a href='/CardTotal' style={{ textDecoration: 'none' }}>
     <ListItem button>
         <ListItemIcon >
           <AssignmentIcon/>
@@ -36,7 +36,7 @@ export const mainListItems = (
       <ListItemText primary="Productos" />
     </ListItem>
     </a>
-    <a href='/CardCategories' style={{ textDecoration: 'none' }}>
+    <a href='/ProductList' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <TableChartIcon />
