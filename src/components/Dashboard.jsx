@@ -173,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
 
   fixedHeightLast: {
     [theme.breakpoints.down("sm")]: {
-      height: 230,
+      height: 270,
     },
     [theme.breakpoints.up("md")]: {
       height: 240,
