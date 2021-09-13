@@ -305,17 +305,17 @@ export default function Dashboard() {
               </Grid>
             ))}
             {/* Tarjeta de último usuario */}
-           {/*  <Grid item xs={12} md={6} lg={6}> */}
+            <Grid item xs={12} md={6} lg={6}>
               {/* <Paper className={fixedHeightPaperDetail}> */}
                 <LastUser />
               {/* </Paper> */}
-            {/* </Grid> */}
+            </Grid>
             {/* Tarjeta de último producto */}
             <Grid item xs={12} md={6} lg={6}>
-              <Paper className={fixedHeightPaperDetail}>
+              {/* <Paper className={fixedHeightPaperDetail}> */}
                 <LastProduct />
-              </Paper>
-            </Grid>
+              {/* </Paper>*/}
+            </Grid> 
             {/* Listado de productos */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>

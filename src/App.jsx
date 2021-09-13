@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Dashboard from "./components/Dashboard";
@@ -191,6 +192,7 @@ export default function App() {
   
   return (
     <main>
+      <CssBaseline />
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
