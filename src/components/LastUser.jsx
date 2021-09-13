@@ -11,7 +11,13 @@ const useStyles = makeStyles({
     },
     colorText: {
         color: '#FFFFFF',
+    },
+    large: {
+        height: '50%',
+        width: '60%',
+        margin: 'auto'
     }
+
 });
 
 export default function LastUser() {
