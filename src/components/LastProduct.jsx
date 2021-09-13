@@ -33,7 +33,7 @@ export default function LastProduct() {
 
   return (
     <React.Fragment>
-      <Title className={classes.colorText}>Último usuario registrado:</Title>
+      <Title className={classes.colorText}>Último Producto registrado:</Title>
       <Typography component="p" variant="h5" className={classes.colorText}>
         {product.name}
       </Typography>
