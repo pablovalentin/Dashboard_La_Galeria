@@ -8,8 +8,6 @@ import CategoryIcon from "@material-ui/icons/Category";
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import TableChartIcon from "@material-ui/icons/TableChart";
 
-
-
 export const mainListItems = (
   <div>
     <a href='/CardTotal' style={{ textDecoration: 'none' }}>

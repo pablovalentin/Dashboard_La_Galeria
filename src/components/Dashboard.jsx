@@ -176,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
       height: 270,
     },
     [theme.breakpoints.up("md")]: {
-      height: 250,
+      height: 300,
     },
   },
 
@@ -291,7 +291,6 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-        <Divider />
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
@@ -307,9 +306,9 @@ export default function Dashboard() {
             ))}
             {/* Tarjeta de último usuario */}
             <Grid item xs={12} md={6} lg={6}>
-              <Paper className={fixedHeightPaperDetail}>
+              {/* <Paper className={fixedHeightPaperDetail}> */}
                 <LastUser />
-              </Paper>
+              {/* </Paper> */}
             </Grid>
             {/* Tarjeta de último producto */}
             <Grid item xs={12} md={6} lg={6}>
