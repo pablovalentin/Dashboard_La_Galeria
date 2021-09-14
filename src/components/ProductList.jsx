@@ -8,6 +8,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Title from "./Title";
+import Paper from "@material-ui/core/Paper";
 
 function preventDefault(event) {
   event.preventDefault();
@@ -16,6 +17,12 @@ function preventDefault(event) {
 const useStyles = makeStyles((theme) => ({
   seeMore: {
     marginTop: theme.spacing(3),
+  },
+  paper: {
+    padding: theme.spacing(2),
+    display: "flex",
+    overflow: "auto",
+    flexDirection: "column",
   },
 }));
 
@@ -34,6 +41,7 @@ export default function ProductList() {
 
   return (
     <React.Fragment>
+      <Paper className={classes.paper}>
       <Title>Listado de productos</Title>
       <Table size="small">
         <TableHead>
@@ -62,6 +70,7 @@ export default function ProductList() {
           ver más productos
         </Link>
       </div>
+      </Paper>
     </React.Fragment>
   );
 }

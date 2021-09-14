@@ -318,9 +318,9 @@ export default function Dashboard() {
             </Grid> 
             {/* Listado de productos */}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>
+              {/* <Paper className={classes.paper}> */}
                 <ProductList />
-              </Paper>
+              {/* </Paper> */}
             </Grid>
             {/* Listado de categorias, con stock total */}
             <Grid item xs={12} md={12} lg={12}>
