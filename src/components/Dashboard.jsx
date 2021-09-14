@@ -323,7 +323,7 @@ export default function Dashboard() {
               {/* </Paper> */}
             </Grid>
             {/* Listado de categorias, con stock total */}
-            <Grid item xs={12} md={12} lg={12}>
+            <Grid item xs={12}>
               {/* <Paper className={fixedHeightPaperCategories}> */}
                 <CardCategories />
              {/*  </Paper> */}

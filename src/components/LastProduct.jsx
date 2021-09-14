@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
           height: 270,
       },
       [theme.breakpoints.up("md")]: {
-          height: 300,
+          height: 250,
       },
   },
 
@@ -72,7 +72,6 @@ export default function LastProduct() {
   return (
     <React.Fragment>
       
-      {/* <Grid item xs={12} md={6} lg={6}> */}
       <Paper className={fixedHeightPaperDetail}>
       <Title className={classes.colorText}>Último producto registrado:</Title>
       <Typography component="p" variant="h5" className={classes.colorText}>
@@ -88,8 +87,6 @@ export default function LastProduct() {
         {"Categoria: " + product.category}
       </Typography>
       </Paper>
-      {/* </Grid> */}
-    
     </React.Fragment>
   );
 }

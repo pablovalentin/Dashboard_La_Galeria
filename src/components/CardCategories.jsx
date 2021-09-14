@@ -34,10 +34,12 @@ const useStyles = makeStyles((theme) => ({
   
   fixedHeightCategories: {
     [theme.breakpoints.down("sm")]: {
-      height: 170,
+      height: 270,
+      /* width: 340, */
     },
     [theme.breakpoints.up("md")]: {
-      height: 190,
+      height: 250,
+      /* width: 340, */
     },
   },
 }));

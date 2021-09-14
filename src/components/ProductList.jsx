@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -15,9 +14,7 @@ function preventDefault(event) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  seeMore: {
-    marginTop: theme.spacing(3),
-  },
+
   paper: {
     padding: theme.spacing(2),
     display: "flex",
@@ -65,11 +62,6 @@ export default function ProductList() {
           })}
         </TableBody>
       </Table>
-      <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          ver más productos
-        </Link>
-      </div>
       </Paper>
     </React.Fragment>
   );

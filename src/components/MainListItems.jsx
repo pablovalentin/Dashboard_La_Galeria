@@ -4,6 +4,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import CategoryIcon from "@material-ui/icons/Category";
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import TableChartIcon from "@material-ui/icons/TableChart";
@@ -15,7 +16,7 @@ export const mainListItems = (
     <Link to='/' style={{ textDecoration: 'none' }}>
     <ListItem button>
         <ListItemIcon >
-          <AssignmentIcon/>
+          <DashboardIcon />
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
     </ListItem>

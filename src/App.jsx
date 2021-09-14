@@ -73,6 +73,11 @@ export default function App() {
     title: {
       flexGrow: 1,
     },
+
+    totalDivider: {
+      height: "100%",
+      position: "absolute",
+    },
   
     drawerPaper: {
       position: "relative",
@@ -238,8 +243,8 @@ export default function App() {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
-        <List>{mainListItems}</List>
+        <Divider className={classes.totalDivider}/>
+          <List>{mainListItems}</List>
       </Drawer>
     <div className="swtich-container">
     <Switch>
