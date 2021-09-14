@@ -17,48 +17,48 @@ export const mainListItems = (
     <ListItem button>
         <ListItemIcon >
           <DashboardIcon />
+          <ListItemText primary="Dashboard" style={{ marginLeft: 30 }}/>
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
     </ListItem>
     </Link>
     <Link to='/CardTotal' style={{ textDecoration: 'none' }}>
     <ListItem button>
         <ListItemIcon >
           <AssignmentIcon/>
+          <ListItemText primary="Totales" style={{ marginLeft: 30 }}/>
         </ListItemIcon>
-        <ListItemText primary="Totales" />
     </ListItem>
     </Link>
     <Link to='/LastUser' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIndIcon />
-      </ListItemIcon>
-      <ListItemText primary="Usuarios" />
+        <ListItemText primary="Usuarios" style={{ marginLeft: 30 }}/>
+      </ListItemIcon>      
     </ListItem>
     </Link>
     <Link to='/LastProduct' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <LocalDrinkIcon />
-      </ListItemIcon>
-      <ListItemText primary="Productos" />
+        <ListItemText primary="Productos" style={{ marginLeft: 30 }}/>
+      </ListItemIcon>      
     </ListItem>
     </Link>
     <Link to='/ProductList' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <TableChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Listado" />
+        <ListItemText primary="Listado" style={{ marginLeft: 30 }}/>
+      </ListItemIcon>     
     </ListItem>
     </Link>
     <Link to='/CardCategories' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <CategoryIcon />
-      </ListItemIcon>
-      <ListItemText primary="Categorías" />
+        <ListItemText primary="Categorías" style={{ marginLeft: 30 }}/>
+      </ListItemIcon>     
     </ListItem>
     </Link>
   </div>
