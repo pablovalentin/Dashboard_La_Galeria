@@ -9,10 +9,6 @@ import TableRow from "@material-ui/core/TableRow";
 import Title from "./Title";
 import Paper from "@material-ui/core/Paper";
 
-function preventDefault(event) {
-  event.preventDefault();
-}
-
 const useStyles = makeStyles((theme) => ({
 
   paper: {
@@ -21,6 +17,17 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     flexDirection: "column",
   },
+
+  bold: {
+    fontWeight: 600
+  },
+
+  table: {
+    '& tbody>.TableRow-root:hover': {
+      background: 'red',
+    }
+  }
+
 }));
 
 export default function ProductList() {
@@ -39,14 +46,14 @@ export default function ProductList() {
   return (
     <React.Fragment>
       <Paper className={classes.paper}>
-      <Title>Listado de productos</Title>
+      <Title className={classes.bold}>Listado de productos</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Nombre</TableCell>
-            <TableCell>Stock</TableCell>
-            <TableCell>Categoria</TableCell>
-            <TableCell align="right">Precio</TableCell>
+            <TableCell className={classes.bold}>Nombre</TableCell>
+            <TableCell className={classes.bold}>Stock</TableCell>
+            <TableCell className={classes.bold}>Categoria</TableCell>
+            <TableCell className={classes.bold} align="right">Precio</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
