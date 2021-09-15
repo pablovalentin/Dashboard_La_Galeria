@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar'
 import Title from './Title';
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
+import CircularProgress from "@material-ui/core/CircularProgress"
 
 const useStyles = makeStyles((theme) => ({
     depositContext: {
@@ -74,16 +74,22 @@ export default function LastUser() {
     return (
     <React.Fragment>
         <Paper className={fixedHeightPaperDetail}>
-        <Title className={classes.colorText}>Último usuario registrado:</Title>
-        <Typography component="p" variant="h5" className={classes.colorText}>
-            <Avatar alt="Imagen de usuario" src={user.image} className={classes.large}/>
-        </Typography>
-        <Typography component="p" variant="h5" className={classes.colorText}>
-            {user.name + ' ' + user.lastName}
-        </Typography>
-        <Typography component="p" variant="h5" className={classes.colorText}>
-            {user.email}
-        </Typography>
+            {user ? (<>
+                <Title className={classes.colorText}>Último usuario registrado:</Title>
+                <Typography component="p" variant="h5" className={classes.colorText}>
+                    <Avatar alt="Imagen de usuario" src={user.image} className={classes.large}/>
+                </Typography>
+                <Typography component="p" variant="h5" className={classes.colorText}>
+                    {user.name + ' ' + user.lastName}
+                </Typography>
+                <Typography component="p" variant="h5" className={classes.colorText}>
+                    {user.email}
+                </Typography>
+                </>
+            ) : (<>
+            <CircularProgress />
+            </>
+            )}
         </Paper>
     </React.Fragment>
     

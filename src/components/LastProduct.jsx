@@ -5,8 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Title from "./Title";
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
+import CircularProgress from "@material-ui/core/CircularProgress"
 
 const useStyles = makeStyles((theme) => ({
   depositContext: {
@@ -70,22 +69,27 @@ export default function LastProduct() {
   
 
   return (
-    <React.Fragment>
-      
+    <React.Fragment>      
       <Paper className={fixedHeightPaperDetail}>
-      <Title className={classes.colorText}>Último producto registrado:</Title>
-      <Typography component="p" variant="h5" className={classes.colorText}>
-        {product.name}
-      </Typography>
-      <Typography component="p" variant="h5" className={classes.colorText}>
-        {"Stock: " + product.quantity}
-      </Typography>
-      <Typography component="p" variant="h5" className={classes.colorText}>
-        {"$" + product.price}
-      </Typography>
-      <Typography component="p" variant="h5" className={classes.colorText}>
-        {"Categoria: " + product.category}
-      </Typography>
+      {product ? (<>
+        <Title className={classes.colorText}>Último producto registrado:</Title>
+        <Typography component="p" variant="h5" className={classes.colorText}>
+          {product.name}
+        </Typography>
+        <Typography component="p" variant="h5" className={classes.colorText}>
+          {"Stock: " + product.quantity}
+        </Typography>
+        <Typography component="p" variant="h5" className={classes.colorText}>
+          {"$" + product.price}
+        </Typography>
+        <Typography component="p" variant="h5" className={classes.colorText}>
+          {"Categoria: " + product.category}
+        </Typography>
+      </>
+      ) : (<>
+      <CircularProgress />
+      </>
+      )}
       </Paper>
     </React.Fragment>
   );

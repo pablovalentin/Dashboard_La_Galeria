@@ -8,7 +8,7 @@ import CardCategories from "./components/CardCategories";
 import LastUser from "./components/LastUser";
 import LastProduct from "./components/LastProduct";
 import ProductList from "./components/ProductList";
-import CardTotal from "./components/CardTotal";
+import AllTotals from "./components/AllTotals";
 import { Route, Switch } from "react-router-dom";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
@@ -251,8 +251,8 @@ export default function App() {
       <Route exact path="/" render={(props) => <Dashboard {...props} />} />
       <Route
         exact
-        path="/CardTotal"
-        render={(props) => <CardTotal {...props} />}
+        path="/AllTotals"
+        render={(props) => <AllTotals {...props} />}
       />
       <Route
         exact

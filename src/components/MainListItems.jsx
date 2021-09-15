@@ -21,7 +21,7 @@ export const mainListItems = (
         </ListItemIcon>
     </ListItem>
     </Link>
-    <Link to='/CardTotal' style={{ textDecoration: 'none' }}>
+    <Link to='/AllTotals' style={{ textDecoration: 'none' }}>
     <ListItem button>
         <ListItemIcon >
           <AssignmentIcon/>

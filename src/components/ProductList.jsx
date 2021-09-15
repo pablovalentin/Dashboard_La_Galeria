@@ -8,6 +8,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Title from "./Title";
 import Paper from "@material-ui/core/Paper";
+import CircularProgress from "@material-ui/core/CircularProgress"
 
 const useStyles = makeStyles((theme) => ({
 
@@ -46,29 +47,35 @@ export default function ProductList() {
   return (
     <React.Fragment>
       <Paper className={classes.paper}>
-      <Title className={classes.bold}>Listado de productos</Title>
-      <Table size="small">
-        <TableHead>
-          <TableRow>
-            <TableCell className={classes.bold}>Nombre</TableCell>
-            <TableCell className={classes.bold}>Stock</TableCell>
-            <TableCell className={classes.bold}>Categoria</TableCell>
-            <TableCell className={classes.bold} align="right">Precio</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {productList.map((product, i) => {
-            return (
-              <TableRow key={i}>
-                <TableCell>{product.name}</TableCell>
-                <TableCell>{product.quantity}</TableCell>
-                <TableCell>{product.category}</TableCell>
-                <TableCell align="right">{"$" + product.price}</TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+      {productList ? (<>
+        <Title className={classes.bold}>Listado de productos</Title>
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell className={classes.bold}>Nombre</TableCell>
+              <TableCell className={classes.bold}>Stock</TableCell>
+              <TableCell className={classes.bold}>Categoria</TableCell>
+              <TableCell className={classes.bold} align="right">Precio</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {productList.map((product, i) => {
+              return (
+                <TableRow key={i}>
+                  <TableCell>{product.name}</TableCell>
+                  <TableCell>{product.quantity}</TableCell>
+                  <TableCell>{product.category}</TableCell>
+                  <TableCell align="right">{"$" + product.price}</TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </>
+      ) : (<>
+      <CircularProgress />
+      </>
+      )}
       </Paper>
     </React.Fragment>
   );
