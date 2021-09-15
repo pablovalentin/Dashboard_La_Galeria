@@ -45,7 +45,7 @@ export const mainListItems = (
       </ListItemIcon>      
     </ListItem>
     </Link>
-    <Link to='/ProductList' style={{ textDecoration: 'none' }}>
+    <Link to='/ProductTable' style={{ textDecoration: 'none' }}>
     <ListItem button>
       <ListItemIcon>
         <TableChartIcon />

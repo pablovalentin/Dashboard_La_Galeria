@@ -12,7 +12,7 @@ import CardTotal from "./CardTotal";
 import CardCategories from "./CardCategories";
 import LastUser from "./LastUser";
 import LastProduct from "./LastProduct";
-import ProductList from "./ProductList";
+import ProductTable from "./ProductTable";
 
 function Copyright() {
   return (
@@ -200,7 +200,7 @@ export default function Dashboard() {
             </Grid> 
             {/* Listado de productos */}
             <Grid item xs={12}>
-              <ProductList />
+              <ProductTable />
             </Grid>
             {/* Tarjeta de categorias */}
             <Grid item xs={12}>
